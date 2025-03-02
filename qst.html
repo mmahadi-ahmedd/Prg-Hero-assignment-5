@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<link href="/src/styles.css" rel="stylesheet">
+</head>
+<body>
+    <section>
+        <nav>
+            <div class="navbar bg-base-100 shadow-sm flex justify-between rounded-xl">
+                <div class="flex space-around">
+                    <img src="./assets/logo.png" alt="">
+                  <a class="btn btn-ghost text-2xl"><span class="font-normal">Dev</span> <span class="font-bold">Board</span></a>
+                </div>
+                <div class="mx-4 px-16 flex justify-between">
+                    <button id="back-home" class="mx-4 p-4 flex bg-indigo-100  ">  <span class="font-bold text-xl" >Back To Desk</span></button>
+                </div>
+            </div>
+        </nav>
+    </section>
+    <div class="p-8 items-center font-semibold">
+        <div>
+            <div class="font-2xl ">
+                Question-1: What are the different ways to select an element in the DOM?
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script>
+        document.getElementById('back-home')
+        .addEventListener('click',function(){
+            window.location.href="./index.html";
+        })
+    </script>
+</body>
+</html>

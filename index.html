@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<link href="/src/styles.css" rel="stylesheet">
+    <style>
+      .comment{
+        background-color: skyblue;
+        border-radius: 10px;
+        padding: 5px;
+        margin: 5px;
+      }
+    </style>
+</head>
+<body class="bg-sky-50 " >
+    <div class=" w-5/6 mx-auto my-4 py-4 rounded-xl ">
+        <div class="navbar bg-base-100 shadow-sm flex justify-between rounded-xl">
+            <div class="flex space-around">
+                <img src="./assets/logo.png" alt="">
+              <a class="btn btn-ghost text-2xl"><span class="font-normal">Dev</span> <span class="font-bold">Board</span></a>
+            </div>
+            <div class="mx-4 px-16 flex justify-between">
+                <button class="mx-4 p-4 flex  bg-yellow-500  rounded-full"> <img src="./assets/checkbox.png" class=" px-4" alt=""> <span class="font-bold text-2xl" >23</span></button>
+              <button><img src="./assets/theme-btn.png" class="bg-yellow-500 px-4 py-2 rounded-full " alt=""></button>
+             
+            </div>
+        </div>
+          <div class="flex my-4 bg-white ">
+            <div class="my-4">
+              <div class="flex justify-around grid-cols-4">
+                <div class="flex px-4  ">
+                  <div><img src="./assets/checkbox.png" class="flex items-center justify-center px-4 py-4" alt=""></div>
+                  <div class="text-lg "><div>Task Assigned</div><div><span id="activity-number">05</span></div></div>
+              </div>
+              <div><button id="discover-btn"><div class="bg-indigo-100 text-indigo-800 px-4 py-2 col-span-2 rounded-md font-semibold">Discover Something New Today!</div></button></div>
+              <div class="text-lg flex items-center">Wed, Jul 28 2025</div>
+            </div>
+              <main class="mt-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                    <!-- Task Card -->
+                    <div class="bg-white p-4 rounded-lg shadow-md">
+                        <h3 class="font-semibold text-lg">ShopEase</h3>
+                        <p class="text-gray-700">Fix Mobile Button Issue</p>
+                        <p class="text-gray-600 text-sm">Debug using Chrome DevTools, check for overlapping...</p>
+                        <div class="flex justify-between">
+                          <p class="mt-2 text-sm text-gray-500">Deadline: 21 March 2025</p>
+                        <button id="fix-btn" class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs mt-2 inline-block">Completed</button>
+                        </div>
+                    </div>
+    
+                    <div class="bg-white p-4 rounded-lg shadow-md">
+                        <h3 class="font-semibold text-lg">CloudSync</h3>
+                        <p class="text-gray-700">Add Dark Mode</p>
+                        <p class="text-gray-600 text-sm">Store the user's preference in localStorage...</p>
+                        <div class="flex justify-between">
+                          <p class="mt-2 text-sm text-gray-500">Deadline: 21 March 2025</p>
+                        <button id="drk-btn" class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs mt-2 inline-block">Completed</button>
+                        </div>
+                    </div>
+    
+                    <div class="bg-white p-4 rounded-lg shadow-md">
+                        <h3 class="font-semibold text-lg">SwiftPay</h3>
+                        <p class="text-gray-700">Optimize Home page</p>
+                        <p class="text-gray-600 text-sm">Debug using Chrome DevTools, check for overlapping...</p>
+                        <div class="flex justify-between">
+                          <p class="mt-2 text-sm text-gray-500">Deadline: 21 March 2025</p>
+                        <button id="opt-btn" class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs mt-2 inline-block">Completed</button>
+                        </div>
+                    </div>
+    
+                    <div class="bg-white p-4 rounded-lg shadow-md">
+                        <h3 class="font-semibold text-lg">Meta</h3>
+                        <p class="text-gray-700">Add new emoji 🙌</p>
+                        <p class="text-gray-600 text-sm">Debug using Chrome DevTools, check for overlapping...</p>
+                        <div class="flex justify-between">
+                          <p class="mt-2 text-sm text-gray-500">Deadline: 21 March 2025</p>
+                        <button id="emoji-btn" class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs mt-2 inline-block">Completed</button>
+                        </div>
+                    </div>
+    
+                    <div class="bg-white p-4 rounded-lg shadow-md">
+                        <h3 class="font-semibold text-lg">Google LLC</h3>
+                        <p class="text-gray-700">Integrate OpenAI API</p>
+                        <p class="text-gray-600 text-sm">Debug using Chrome DevTools, check for overlapping...</p>
+                        <div class="flex justify-between">
+                          <p class="mt-2 text-sm text-gray-500">Deadline: 21 March 2025</p>
+                        <button id="ai-btn" class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs mt-2 inline-block">Completed</button>
+                        </div>
+                    </div>
+    
+                    <div class="bg-white p-4 rounded-lg shadow-md">
+                        <h3 class="font-semibold text-lg">Glassdoor</h3>
+                        <p class="text-gray-700">Improve Job searching</p>
+                        <p class="text-gray-600 text-sm">Debug using Chrome DevTools, check for overlapping...</p>
+                        <div class="flex justify-between">
+                          <p class="mt-2 text-sm text-gray-500">Deadline: 21 March 2025</p>
+                        <button id="job-btn" class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs mt-2 inline-block">Completed</button>
+                        </div>
+                    </div>
+                </div>
+              </main>
+            </div>
+            <div class="p-4" >
+              <h3 class="font-semibold text-lg flex justify-center">Activity Log</h3>
+              <div id="clr-btn" class="flex justify-center" ><button class="bg-yellow-200 text-yellow-800 px-4 py-2 rounded mt-2 ">Clear History</button></div>
+              <div id="comment-container" class="comment" >
+                <p id="fix-cmt" class=" comment m-2 text-gray-600 bg-sky-50 hidden ">You have completed the task Fix Mobile Issue at </p>
+                <p id="dark-cmt" class=" comment m-2 text-gray-600 bg-sky-50 hidden ">You have completed the task Add Dark Mode at </p>
+              <p id="opt-cmt" class=" comment  m-2 text-gray-600 bg-sky-50 hidden ">You have completed the task Optimize Home page at </p>
+              <p id="emoji-cmt" class=" comment m-2 text-gray-600 bg-sky-50 hidden ">You have completed the task Add New Emoji at </p>
+              <p id="ai-cmt" class=" comment m-2 text-gray-600 bg-sky-50 hidden ">You have completed the task Integrate OpenAI API at </p>
+              <p id="job-cmt" class=" comment m-2 text-gray-600 bg-sky-50 hidden ">You have completed the task Improve JOb Searching at </p>
+              </div>
+            </div>
+          </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    <script >
+      document.getElementById('fix-btn')
+      .addEventListener('click',function(){
+        alert("Board Updated")
+        const comment = document.getElementById('fix-cmt').innerText;
+        const now = new Date();
+        const timeString = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true });
+        const commentContainer = document.getElementById('comment-container');
+        const commentElement = document.createElement('p');
+        commentElement.innerText = comment + timeString ;
+        commentContainer.appendChild(commentElement);
+      })
+      document.getElementById('drk-btn')
+      .addEventListener('click',function(){
+        alert("Board Updated")
+        const comment = document.getElementById('dark-cmt').innerText;
+        const now = new Date();
+        const timeString = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true });
+        const commentContainer = document.getElementById('comment-container');
+        const commentElement = document.createElement('p');
+        commentElement.innerText = comment + timeString ;
+        commentContainer.appendChild(commentElement);
+      })
+      document.getElementById('opt-btn')
+      .addEventListener('click',function(){
+        alert("Board Updated")
+        const comment = document.getElementById('opt-cmt').innerText;
+        const now = new Date();
+        const timeString = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true });
+        const commentContainer = document.getElementById('comment-container');
+        const commentElement = document.createElement('p');
+        commentElement.innerText = comment + timeString ;
+        commentContainer.appendChild(commentElement);
+      })
+      document.getElementById('emoji-btn')
+      .addEventListener('click',function(){
+        alert("Board Updated")
+        const comment = document.getElementById('emoji-cmt').innerText;
+        const now = new Date();
+        const timeString = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true });
+        const commentContainer = document.getElementById('comment-container');
+        const commentElement = document.createElement('p');
+        commentElement.innerText = comment + timeString ;
+        commentContainer.appendChild(commentElement);
+      })
+      document.getElementById('ai-btn')
+      .addEventListener('click',function(){
+        alert("Board Updated")
+        const comment = document.getElementById('ai-cmt').innerText;
+        const now = new Date();
+        const timeString = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true });
+        const commentContainer = document.getElementById('comment-container');
+        const commentElement = document.createElement('p');
+        commentElement.innerText = comment + timeString ;
+        commentContainer.appendChild(commentElement);
+      })
+      document.getElementById('job-btn')
+      .addEventListener('click',function(){
+        alert("Board Updated")
+        const comment = document.getElementById('job-cmt').innerText;
+        const now = new Date();
+        const timeString = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true });
+        const commentContainer = document.getElementById('comment-container');
+        const commentElement = document.createElement('p');
+        commentElement.innerText = comment + timeString ;
+        commentContainer.appendChild(commentElement);
+      })
+      document.getElementById('clr-btn')
+      .addEventListener('click',function(){
+        const allP = document.getElementById('comment-container');
+        allP.querySelectorAll('p').forEach(p => p.remove());
+        
+      })
+      // document.getElementById('fix-btn')
+      // .addEventListener('click',function(){
+      //   let convertedActivityNumber = parseInt(document.getElementById('activity-number').innerText);
+      //   for(let i = 5;;i++){
+      //     num = convertedActivityNumber+1;
+      //   }
+      //   document.getElementById('activity-number').innerText = num;
+
+      // })
+      document.getElementById('discover-btn')
+      .addEventListener('click',function(){
+        window.location.href="./qst.html"
+      })
+    </script>
+</body>
+</html>
